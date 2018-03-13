@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.collections.ObservableList?>
+<GridPane fx:controller="gui.controller.MainController" xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10" styleClass="root" blendMode="EXCLUSION">
+
+    <padding><Insets top="25" right="25" bottom="10" left="25"/></padding>
+
+   <Label fx:id="welcome" text="Розв'язок задачі розкрою" GridPane.rowIndex="0" GridPane.columnIndex="0" GridPane.columnSpan="2"/>
+
+    <Label fx:id="m_label" text="Введіть к-сть видів напівфабрикатів m: " GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+    <TextField fx:id="m_select" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+    <Label fx:id="a1_label" text="Введіть к-сть напівфабрикатів 1 виду" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+    <TextField fx:id="a1_input" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+    <Label fx:id="a2_label" text="Введіть к-сть напівфабрикатів 2 виду" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+    <TextField fx:id="a2_input" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+    <Label fx:id="a3_label" text="Введіть к-сть напівфабрикатів 3 виду" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+    <TextField fx:id="a3_input" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+    <Label fx:id="alpha1_label" text="Введіть розмір напівфабрикатів 1 виду" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+    <TextField fx:id="alpha1_input" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+
+    <Label fx:id="alpha2_label" text="Введіть розмір напівфабрикатів 2 виду" GridPane.rowIndex="6" GridPane.columnIndex="0"/>
+    <TextField fx:id="alpha2_input" GridPane.rowIndex="6" GridPane.columnIndex="1"/>
+
+    <Label fx:id="alpha3_label" text="Введіть розмір напівфабрикатів 3 виду" GridPane.rowIndex="7" GridPane.columnIndex="0"/>
+    <TextField fx:id="alpha3_input" GridPane.rowIndex="7" GridPane.columnIndex="1"/>
+
+    <Label fx:id="l_label" text="Ввведіть к-сть видів необхідних деталей l: " GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+    <TextField fx:id="l_select" GridPane.rowIndex="1" GridPane.columnIndex="3"/>
+
+    <Label fx:id="k1_label" text="Введіть к-сть деталей 1 виду" GridPane.rowIndex="2" GridPane.columnIndex="2"/>
+    <TextField fx:id="k1_input" GridPane.rowIndex="2" GridPane.columnIndex="3"/>
+
+    <Label fx:id="k2_label" text="Введіть к-сть деталей 2 виду" GridPane.rowIndex="3" GridPane.columnIndex="2"/>
+    <TextField fx:id="k2_input" GridPane.rowIndex="3" GridPane.columnIndex="3"/>
+
+    <Label fx:id="k3_label" text="Введіть к-сть деталей 3 виду" GridPane.rowIndex="4" GridPane.columnIndex="2"/>
+    <TextField fx:id="k3_input" GridPane.rowIndex="4" GridPane.columnIndex="3"/>
+
+    <Label fx:id="t1_label" text="Введіть розмір деталей 1 виду" GridPane.rowIndex="5" GridPane.columnIndex="2"/>
+    <TextField fx:id="t1_input" GridPane.rowIndex="5" GridPane.columnIndex="3"/>
+
+    <Label fx:id="t2_label" text="Введіть розмір деталей 2 виду" GridPane.rowIndex="6" GridPane.columnIndex="2"/>
+    <TextField fx:id="t2_input" GridPane.rowIndex="6" GridPane.columnIndex="3"/>
+
+    <Label fx:id="t3_label" text="Введіть розмір деталей 3 виду" GridPane.rowIndex="7" GridPane.columnIndex="2"/>
+    <TextField fx:id="t3_input" GridPane.rowIndex="7" GridPane.columnIndex="3"/>
+
+    <Label fx:id="alpha_label" text="Введіть ступінь недомінованості" GridPane.rowIndex="0" GridPane.columnIndex="2"/>
+    <TextField fx:id="alpha_input" GridPane.rowIndex="0" GridPane.columnIndex="3"/>
+    <HBox spacing="10" alignment="bottom_right" GridPane.columnIndex="0" GridPane.rowIndex="8">
+        <Button fx:id="count" text="Обчислити" onAction="#handleCountButtonAction"/>
+    </HBox>
+
+    <TextArea fx:id="ans" GridPane.columnIndex="0" GridPane.rowIndex="9" GridPane.columnSpan="4" GridPane.rowSpan="10"/>
+
+</GridPane>
